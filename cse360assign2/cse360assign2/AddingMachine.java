@@ -11,29 +11,34 @@ package cse360assign2;
 public class AddingMachine 
 {
 	private int total;
+	private String opsHist;
 	
-	public AddingMachine() 
+	public AddingMachine() //constructor to set the operations history and total as 0
 	{
-		total = 0;  // not needed - included for clarity
+		total = 0;
+		opsHist = "0";
 	}
-	public int getTotal() 
+	public int getTotal() //method to return total value
 	{
-		return 0;
+		return total;
 	}
-	public void add(int value)
+	public void add(int value) //method to add parameter to total
 	{
-		
+		total += value;
+		opsHist = opsHist + " + " + value;
 	}
-	public void subtract(int value) 
+	public void subtract(int value) //method to subtract parameter from total
 	{
-		
+		total -= value;
+		opsHist = opsHist + " - " + value;
 	}
-	public String toString() 
+	public String toString() //method to return the operations history
 	{
-		return "";
+		return opsHist;
 	}
-	public void clear() 
+	public void clear() //method to reset the data
 	{
-		
+		total = 0;
+		opsHist = "0";
 	}
 }
